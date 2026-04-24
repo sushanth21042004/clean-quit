@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clean Quit — Support</title>
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --surface: #1a1a1a;
+      --border: #2a2a2a;
+      --accent: #5b8af5;
+      --text: #f0f0f0;
+      --muted: #888;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 10;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .nav-brand svg { width: 28px; height: 28px; }
+    nav ul { list-style: none; display: flex; gap: 28px; }
+    nav ul li a { color: var(--muted); font-size: 14px; transition: color 0.2s; }
+    nav ul li a:hover { color: var(--text); text-decoration: none; }
+    .hero { text-align: center; padding: 80px 24px 60px; }
+    .hero-icon {
+      width: 96px; height: 96px;
+      background: linear-gradient(135deg, #3a3a3a, #1e1e1e);
+      border-radius: 22px;
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    }
+    .hero-icon svg { width: 52px; height: 52px; }
+    .hero h1 { font-size: 42px; font-weight: 800; letter-spacing: -1px; margin-bottom: 16px; }
+    .hero p { font-size: 18px; color: var(--muted); max-width: 520px; margin: 0 auto 32px; }
+    .btn {
+      display: inline-block; padding: 12px 28px;
+      background: var(--accent); color: #fff;
+      border-radius: 10px; font-weight: 600; font-size: 15px; transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.85; text-decoration: none; }
+    .btn-ghost { background: var(--surface); color: var(--text); border: 1px solid var(--border); margin-left: 12px; }
+    section { max-width: 800px; margin: 0 auto; padding: 60px 24px; }
+    section + section { border-top: 1px solid var(--border); }
+    .section-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    section h2 { font-size: 28px; font-weight: 700; margin-bottom: 32px; }
+    .faq-item { margin-bottom: 28px; }
+    .faq-item h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+    .faq-item p { color: var(--muted); font-size: 15px; }
+    .faq-item code { background: var(--surface); border: 1px solid var(--border); padding: 2px 7px; border-radius: 5px; font-family: "SF Mono", monospace; font-size: 13px; color: var(--text); }
+    .features { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 8px; }
+    .feature-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 20px; }
+    .feature-card .icon { font-size: 26px; margin-bottom: 12px; }
+    .feature-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+    .feature-card p { font-size: 13px; color: var(--muted); }
+    .contact-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px; text-align: center; }
+    .contact-box h2 { font-size: 24px; margin-bottom: 10px; }
+    .contact-box p { color: var(--muted); margin-bottom: 24px; font-size: 15px; }
+    .contact-box a.email { font-size: 17px; font-weight: 600; color: var(--accent); }
+    footer { border-top: 1px solid var(--border); text-align: center; padding: 28px 24px; font-size: 13px; color: var(--muted); }
+    footer a { color: var(--muted); margin: 0 10px; }
+    footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="index.html">
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="28" height="28" rx="7" fill="#1e1e1e"/>
+        <path d="M8 8L20 20M20 8L8 20" stroke="#f0f0f0" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      Clean Quit
+    </a>
+    <ul>
+      <li><a href="index.html">Support</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </nav>
+  <div class="hero">
+    <div class="hero-icon">
+      <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 10L42 42M42 10L10 42" stroke="#f0f0f0" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <h1>Clean Quit Support</h1>
+    <p>Quit every open app in one click. Keep your Mac clean, fast, and focused.</p>
+    <a class="btn" href="mailto:support@cleanquit.app">Email Support</a>
+    <a class="btn btn-ghost" href="#faq">Read FAQ</a>
+  </div>
+  <section>
+    <div class="section-label">What's inside</div>
+    <h2>Everything you need to know</h2>
+    <div class="features">
+      <div class="feature-card"><div class="icon">&#10005;</div><h3>Quit All Apps</h3><p>One click closes every app outside your whitelist with a confirmation.</p></div>
+      <div class="feature-card"><div class="icon">&#9000;&#65039;</div><h3>Global Shortcut</h3><p>Press <code>&#8984;&#8679;Q</code> from anywhere to trigger Quit All instantly.</p></div>
+      <div class="feature-card"><div class="icon">&#128737;</div><h3>Whitelist</h3><p>Protect apps you always want running — Finder is protected by default.</p></div>
+      <div class="feature-card"><div class="icon">&#10005;</div><h3>Per-app Quit</h3><p>Click the &#10005; next to any running app in the menu to quit just that one.</p></div>
+    </div>
+  </section>
+  <section id="faq">
+    <div class="section-label">FAQ</div>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><h3>How do I quit all apps?</h3><p>Click the Clean Quit icon in your menu bar and choose <strong>Quit All Apps&hellip;</strong>, or press <code>&#8984;&#8679;Q</code> from anywhere on your Mac.</p></div>
+    <div class="faq-item"><h3>Why does macOS ask &ldquo;Clean Quit wants to control [App]&rdquo;?</h3><p>macOS requires your permission the first time Clean Quit quits each app. Once you allow it, you won&rsquo;t be asked again for that app. You can review these permissions in <strong>System Settings &rarr; Privacy &amp; Security &rarr; Automation</strong>.</p></div>
+    <div class="faq-item"><h3>How do I protect an app so it&rsquo;s never quit?</h3><p>Open the menu bar icon, choose <strong>Manage Whitelist&hellip;</strong>, then click <strong>Add App&hellip;</strong> or <strong>Add Running&hellip;</strong> to add apps you want to keep safe.</p></div>
+    <div class="faq-item"><h3>Can I quit a single app without closing everything?</h3><p>Yes — open the menu, find the app in the <strong>Running Apps</strong> list, and click the <code>&#10005;</code> on the right side of its row.</p></div>
+    <div class="faq-item"><h3>How do I make Clean Quit launch when I log in?</h3><p>Open <strong>Settings&hellip;</strong> from the menu and toggle <strong>Launch at login</strong>.</p></div>
+    <div class="faq-item"><h3>Why doesn&rsquo;t Clean Quit appear in the Dock?</h3><p>Clean Quit is a menu bar utility by design — it lives in the top-right corner of your screen and has no Dock presence to keep things minimal.</p></div>
+    <div class="faq-item"><h3>Is Clean Quit safe to use with sandboxed apps?</h3><p>Yes. Clean Quit is itself a sandboxed Mac App Store app. It uses a system-approved automation path to send quit events, so it works reliably with all apps.</p></div>
+  </section>
+  <section>
+    <div class="contact-box">
+      <h2>Still need help?</h2>
+      <p>Can&rsquo;t find what you&rsquo;re looking for? Send us an email and we&rsquo;ll get back to you.</p>
+      <a class="email" href="mailto:support@cleanquit.app">support@cleanquit.app</a>
+    </div>
+  </section>
+  <footer>
+    <span>&copy; 2025 Clean Quit. All rights reserved.</span><br /><br />
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+    <a href="mailto:support@cleanquit.app">Contact</a>
+  </footer>
+</body>
+</html>
